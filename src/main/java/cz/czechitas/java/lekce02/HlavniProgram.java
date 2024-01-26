@@ -17,7 +17,7 @@ public class HlavniProgram {
 
 //        nakresliDomecek(strana);
 //        nakresliXdomecku(pocet, strana);
-//        nakresliPrasatko(strana);
+        nakresliPrasatko(strana);
 //        nakresliSlunce();
     }
 
@@ -67,11 +67,23 @@ public class HlavniProgram {
         zofka.turnLeft(90);
         nakresliNohy(strana);
 
-        // presun a hlava
+        // presun, hlava a oko
         zofka.turnLeft(90);
         zofka.move(strana * 1.5);
         nakresliHlavu(strana);
-        zofka.turnLeft(60);
+        zofka.turnRight(120);
+        zofka.move(strana / 2);
+        zofka.turnRight(90);
+        zofka.penUp();
+        zofka.move(strana / 2);
+        zofka.penDown();
+        zofka.move(1);
+        zofka.turnRight(180);
+        zofka.penUp();
+        zofka.move(strana / 2);
+        zofka.turnRight(90);
+        zofka.move(strana / 2);
+        zofka.turnRight(180);
     }
 
     private void nakresliObdelnik(int strana) {
